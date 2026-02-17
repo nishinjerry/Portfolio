@@ -104,6 +104,6 @@ export const Contact = () => (
 
 export const Footer = () => (
     <footer className="bg-dark-lighter py-8 text-center text-gray-500 text-sm">
-        <p>© {new Date().getFullYear()} Nishin Jerry Xi. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Nishin Jerry X I. All rights reserved.</p>
     </footer>
 );
