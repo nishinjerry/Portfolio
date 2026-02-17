@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { FaPython, FaDatabase, FaChartBar, FaRobot, FaWindows, FaCode } from 'react-icons/fa';
-import { SiTensorflow, SiScikitlearn, SiNumpy, SiPandas, SiOpencv, SiRos, SiMysql } from 'react-icons/si';
+import { FaPython, FaDatabase, FaChartBar, FaRobot, FaWindows, FaCode, FaReact, FaNodeJs } from 'react-icons/fa';
+import { SiTensorflow, SiScikitlearn, SiNumpy, SiPandas, SiOpencv, SiRos, SiMysql, SiNestjs } from 'react-icons/si';
 
 const Skills = () => {
     const categories = [
@@ -9,6 +9,9 @@ const Skills = () => {
             icon: <FaCode className="text-4xl text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]" />,
             skills: [
                 { name: "Python", icon: <FaPython />, level: 90 },
+                { name: "React", icon: <FaReact />, level: 85 },
+                { name: "Node.js", icon: <FaNodeJs />, level: 80 },
+                { name: "NestJS", icon: <SiNestjs />, level: 75 },
                 { name: "SQL", icon: <SiMysql />, level: 85 },
             ],
             color: "from-cyan-500 to-blue-600"
