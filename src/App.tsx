@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,20 +9,35 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Loader from './components/Loader';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className="bg-dark min-h-screen text-white selection:bg-primary selection:text-dark">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <AnimatePresence mode="wait">
+        {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
+      </AnimatePresence>
+      {!isLoading && (
+        <motion.div
+          className="bg-dark min-h-screen text-white selection:bg-primary selection:text-dark"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Navbar />
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Education />
+          <Contact />
+          <Footer />
+        </motion.div>
+      )}
+    </>
   );
 }
 
