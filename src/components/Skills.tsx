@@ -67,7 +67,7 @@ const Skills = () => {
                     <h2 className="text-4xl md:text-6xl font-black mb-20 text-center font-mono tracking-tighter">
                         <span className="inline-block border-b-4 border-cyan-500 pb-2">
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400">02.</span>
-                            <span className="text-white ml-4">Tech/Stack</span>
+                            <span className="text-gray-900 dark:text-white ml-4">Tech/Stack</span>
                         </span>
                     </h2>
 
@@ -96,9 +96,9 @@ const Skills = () => {
                                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
                                 <div className={`absolute -inset-0.5 bg-gradient-to-r ${category.color} rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500`} />
 
-                                <div className="relative h-full bg-slate-900/90 backdrop-blur-xl p-6 rounded-2xl border border-white/10 overflow-hidden transform-style-3d">
+                                <div className="relative h-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl p-6 rounded-2xl border border-black/10 dark:border-white/10 overflow-hidden transform-style-3d">
                                     {/* Tech Circuit Pattern Overlay */}
-                                    <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:10px_10px]"></div>
+                                    <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,0,0,0.1)_1px,_transparent_1px)] dark:bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:10px_10px]"></div>
 
                                     <div className="relative z-10">
                                         <div className="flex flex-col items-center mb-6">
@@ -116,7 +116,7 @@ const Skills = () => {
                                             >
                                                 {category.icon}
                                             </motion.div>
-                                            <h3 className="text-xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 group-hover:from-white group-hover:to-white transition-all">
+                                            <h3 className="text-xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 group-hover:from-gray-900 group-hover:to-gray-900 dark:group-hover:from-white dark:group-hover:to-white transition-all">
                                                 {category.title}
                                             </h3>
                                         </div>
@@ -125,15 +125,15 @@ const Skills = () => {
                                             {category.skills.map((skill, idx) => (
                                                 <div key={idx} className="group/skill">
                                                     <div className="flex justify-between items-center mb-2">
-                                                        <div className="flex items-center gap-2 text-gray-400 group-hover/skill:text-cyan-300 transition-colors">
+                                                        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover/skill:text-cyan-600 dark:group-hover/skill:text-cyan-300 transition-colors">
                                                             <span className="text-lg">{skill.icon}</span>
                                                             <span className="font-mono text-sm font-medium tracking-wide">{skill.name}</span>
                                                         </div>
-                                                        <span className="text-xs font-bold text-gray-600 group-hover/skill:text-white transition-colors">
+                                                        <span className="text-xs font-bold text-gray-500 dark:text-gray-400 group-hover/skill:text-gray-900 dark:group-hover/skill:text-white transition-colors">
                                                             {skill.level}%
                                                         </span>
                                                     </div>
-                                                    <div className="h-2 w-full bg-black/50 rounded-full overflow-hidden p-[1px] border border-white/5">
+                                                    <div className="h-2 w-full bg-gray-200 dark:bg-black/50 rounded-full overflow-hidden p-[1px] border border-black/5 dark:border-white/5">
                                                         <motion.div
                                                             initial={{ width: 0 }}
                                                             whileInView={{ width: `${skill.level}%` }}

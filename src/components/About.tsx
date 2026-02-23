@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section id="about" className="py-20 bg-dark-lighter relative">
+        <section id="about" className="py-20 bg-gray-50 dark:bg-dark-lighter relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -15,9 +15,9 @@ const About = () => {
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="text-gray-300 leading-relaxed text-lg space-y-6">
+                        <div className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg space-y-6">
                             <p>
-                                I am an aspiring <strong className="text-white">Data Scientist</strong> with strong skills in data analysis, machine learning, and statistical modeling.
+                                I am an aspiring <strong className="text-gray-900 dark:text-white">Data Scientist</strong> with strong skills in data analysis, machine learning, and statistical modeling.
                                 Proficient in <span className="text-primary">Python, R, SQL</span>, and data visualization tools.
                             </p>
                             <p>
@@ -29,7 +29,7 @@ const About = () => {
 
                         <div className="relative group">
                             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                            <div className="relative bg-dark p-8 rounded-lg border border-white/10">
+                            <div className="relative bg-gray-900 dark:bg-dark p-8 rounded-lg border border-white/10">
                                 <code className="text-sm text-green-400 block mb-2"># current_status</code>
                                 <div className="text-gray-400 font-mono text-sm">
                                     <span className="text-purple-400">const</span> <span className="text-blue-400">aspirations</span> = [<br />

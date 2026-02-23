@@ -16,13 +16,13 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-secondary font-mono text-lg mb-4">Hello, I'm</h2>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
                         Nishin Jerry X I
                     </h1>
-                    <h3 className="text-2xl md:text-4xl text-gray-300 mb-8 font-light">
+                    <h3 className="text-2xl md:text-4xl text-gray-600 dark:text-gray-300 mb-8 font-light">
                         Aspiring <span className="text-primary font-semibold">Data Scientist</span>
                     </h3>
-                    <p className="max-w-2xl mx-auto text-gray-400 text-lg mb-10 leading-relaxed">
+                    <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg mb-10 leading-relaxed">
                         Crafting intelligent solutions with Python, Machine Learning, and Data Analysis.
                         Passionate about turning data into actionable insights.
                     </p>
@@ -30,13 +30,13 @@ const Hero = () => {
                     <div className="flex justify-center gap-4">
                         <a
                             href="#projects"
-                            className="px-8 py-3 bg-primary/10 border border-primary text-primary rounded-full hover:bg-primary hover:text-dark transition-all duration-300 font-medium"
+                            className="px-8 py-3 bg-primary/10 border border-primary text-primary rounded-full hover:bg-primary hover:text-white dark:hover:text-dark transition-all duration-300 font-medium"
                         >
                             View Projects
                         </a>
                         <a
                             href="#contact"
-                            className="px-8 py-3 border border-white/20 text-white rounded-full hover:bg-white/10 transition-all duration-300 font-medium"
+                            className="px-8 py-3 border border-black/20 dark:border-white/20 text-gray-900 dark:text-white rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-all duration-300 font-medium"
                         >
                             Contact Me
                         </a>

@@ -21,7 +21,7 @@ function App() {
       </AnimatePresence>
       {!isLoading && (
         <motion.div
-          className="bg-dark min-h-screen text-white selection:bg-primary selection:text-dark"
+          className="bg-white dark:bg-dark min-h-screen text-gray-900 dark:text-white selection:bg-primary selection:text-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}

@@ -38,7 +38,7 @@ const Projects = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                                className="group relative bg-dark-lighter rounded-xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all duration-300"
+                                className="group relative bg-white dark:bg-dark-lighter rounded-xl overflow-hidden border border-black/5 dark:border-white/5 hover:border-primary/50 transition-all duration-300 shadow-lg dark:shadow-none"
                             >
                                 {/* Image Overlay */}
                                 <div className="h-48 bg-gradient-to-b from-white/5 to-transparent relative overflow-hidden">
@@ -51,12 +51,12 @@ const Projects = () => {
                                 </div>
 
                                 <div className="p-6">
-                                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                                    <p className="text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                                    <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">{project.description}</p>
 
                                     <div className="flex flex-wrap gap-2 mt-auto">
                                         {project.tags.map((tag, idx) => (
-                                            <span key={idx} className="text-xs font-mono px-2 py-1 bg-white/5 rounded text-primary border border-primary/20">
+                                            <span key={idx} className="text-xs font-mono px-2 py-1 bg-black/5 dark:bg-white/5 rounded text-primary border border-primary/20">
                                                 {tag}
                                             </span>
                                         ))}

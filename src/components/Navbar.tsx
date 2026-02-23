@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-dark/80 backdrop-blur-md border-b border-white/10 py-2' : 'bg-transparent py-4'
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-dark/80 backdrop-blur-md border-b border-black/10 dark:border-white/10 py-2' : 'bg-transparent py-4'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +84,8 @@ const Navbar = () => {
               ))}
             </div>
 
-            <div className="flex items-center space-x-4 pl-4 border-l border-white/10">
+            <div className="flex items-center space-x-4 pl-4 border-l border-black/10 dark:border-white/10">
+              <ThemeToggle />
               {socialLinks.map((social, i) => (
                 <motion.a
                   key={social.name}
@@ -144,7 +146,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-dark/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
+            className="md:hidden bg-white/95 dark:bg-dark/95 backdrop-blur-xl border-b border-black/10 dark:border-white/10 overflow-hidden"
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
               {navLinks.map((link, i) => (
@@ -161,7 +163,8 @@ const Navbar = () => {
                   <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </motion.a>
               ))}
-              <div className="flex justify-center space-x-6 pt-4 mt-4 border-t border-white/10">
+              <div className="flex justify-center space-x-6 pt-4 mt-4 border-t border-black/10 dark:border-white/10">
+                <ThemeToggle />
                 {socialLinks.map((social, i) => (
                   <motion.a
                     key={social.name}

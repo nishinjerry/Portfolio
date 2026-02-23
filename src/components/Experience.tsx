@@ -38,7 +38,7 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="py-20 bg-dark-lighter relative">
+        <section id="experience" className="py-20 bg-gray-50 dark:bg-dark-lighter relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ const Experience = () => {
                         {experiences.map((exp, index) => (
                             <div key={index} className="relative pl-8 md:pl-0">
                                 {/* Timeline Line */}
-                                <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
+                                <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-black/10 dark:bg-white/10 -translate-x-1/2"></div>
 
                                 <motion.div
                                     initial={{ opacity: 0, y: 50 }}
@@ -65,15 +65,15 @@ const Experience = () => {
                                 >
                                     <div className="hidden md:block w-5/12"></div>
 
-                                    <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-dark -translate-x-1.5 md:-translate-x-2 mt-1.5 md:mt-0 z-10"></div>
+                                    <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-dark -translate-x-1.5 md:-translate-x-2 mt-1.5 md:mt-0 z-10"></div>
 
-                                    <div className="md:w-5/12 bg-dark p-6 rounded-xl border border-white/5 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/10">
+                                    <div className="md:w-5/12 bg-white dark:bg-dark p-6 rounded-xl border border-black/5 dark:border-white/5 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/10">
                                         <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full mb-3 font-mono">{exp.period}</span>
-                                        <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
-                                        <h4 className="text-lg text-gray-400 mb-4">{exp.company} <span className="text-sm opacity-60">• {exp.location}</span></h4>
+                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.role}</h3>
+                                        <h4 className="text-lg text-gray-600 dark:text-gray-400 mb-4">{exp.company} <span className="text-sm opacity-60">• {exp.location}</span></h4>
                                         <ul className="space-y-2">
                                             {exp.description.map((item, idx) => (
-                                                <li key={idx} className="text-gray-400 text-sm flex items-start gap-2">
+                                                <li key={idx} className="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2">
                                                     <span className="text-primary mt-1">▹</span>
                                                     {item}
                                                 </li>

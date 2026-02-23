@@ -3,7 +3,7 @@ import { FaGraduationCap, FaAward } from 'react-icons/fa';
 
 const Education = () => {
     return (
-        <section id="education" className="py-20 bg-dark-lighter relative">
+        <section id="education" className="py-20 bg-gray-50 dark:bg-dark-lighter relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -18,36 +18,36 @@ const Education = () => {
                     <div className="grid lg:grid-cols-2 gap-12">
                         {/* Education Column */}
                         <div className="space-y-8">
-                            <h3 className="text-2xl font-bold text-white flex items-center gap-3 mb-8">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-8">
                                 <FaGraduationCap className="text-primary" /> Academic History
                             </h3>
 
-                            <div className="relative border-l-2 border-white/10 pl-8 space-y-12">
+                            <div className="relative border-l-2 border-black/10 dark:border-white/10 pl-8 space-y-12">
                                 <div className="relative">
-                                    <div className="absolute -left-[39px] top-0 bg-dark p-2 rounded-full border border-primary text-primary">
+                                    <div className="absolute -left-[39px] top-0 bg-white dark:bg-dark p-2 rounded-full border border-primary text-primary">
                                         <FaGraduationCap size={16} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-white">Master of Science in Data Science</h4>
+                                    <h4 className="text-xl font-bold text-gray-900 dark:text-white">Master of Science in Data Science</h4>
                                     <p className="text-primary text-sm mb-2">St. Joseph’s College, Tiruchirappalli</p>
-                                    <p className="text-gray-400 text-sm mb-1">July 2022 - Apr 2024</p>
-                                    <p className="text-gray-300 font-mono">CGPA: 7.70</p>
+                                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">July 2022 - Apr 2024</p>
+                                    <p className="text-gray-700 dark:text-gray-300 font-mono">CGPA: 7.70</p>
                                 </div>
 
                                 <div className="relative">
-                                    <div className="absolute -left-[39px] top-0 bg-dark p-2 rounded-full border border-white/20 text-gray-400">
+                                    <div className="absolute -left-[39px] top-0 bg-white dark:bg-dark p-2 rounded-full border border-black/20 dark:border-white/20 text-gray-500 dark:text-gray-400">
                                         <FaGraduationCap size={16} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-white">Bachelor of Computer Application</h4>
+                                    <h4 className="text-xl font-bold text-gray-900 dark:text-white">Bachelor of Computer Application</h4>
                                     <p className="text-primary text-sm mb-2">Loyola college Chennai</p>
-                                    <p className="text-gray-400 text-sm mb-1">July 2019 - Apr 2022</p>
-                                    <p className="text-gray-300 font-mono">CGPA: 7.75</p>
+                                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">July 2019 - Apr 2022</p>
+                                    <p className="text-gray-700 dark:text-gray-300 font-mono">CGPA: 7.75</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Certifications Column */}
                         <div>
-                            <h3 className="text-2xl font-bold text-white flex items-center gap-3 mb-8">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-8">
                                 <FaAward className="text-secondary" /> Certifications & Awards
                             </h3>
 
@@ -64,10 +64,10 @@ const Education = () => {
                                     <motion.div
                                         key={idx}
                                         whileHover={{ x: 10 }}
-                                        className="p-4 bg-dark border border-white/5 rounded-lg flex items-center gap-3 hover:border-secondary/30 transition-colors"
+                                        className="p-4 bg-white dark:bg-dark border border-black/5 dark:border-white/5 rounded-lg flex items-center gap-3 hover:border-secondary/30 transition-colors shadow-sm dark:shadow-none"
                                     >
                                         <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                                        <span className="text-gray-300 text-sm">{cert}</span>
+                                        <span className="text-gray-700 dark:text-gray-300 text-sm">{cert}</span>
                                     </motion.div>
                                 ))}
                             </div>

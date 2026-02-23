@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #06b6d4;
   --color-secondary: #8b5cf6;
@@ -10,8 +12,7 @@
 }
 
 body {
-  background-color: var(--color-dark);
-  color: #ffffff;
+  @apply bg-white text-gray-900 dark:bg-dark dark:text-white transition-colors duration-300;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
