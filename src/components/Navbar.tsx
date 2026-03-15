@@ -44,21 +44,11 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-2xl font-bold font-mono text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary relative">
-              <span className="inline-block relative">
-                N
+            <span className="text-2xl font-bold font-mono text-gray-900 dark:text-white relative flex items-center">
+              <span className="inline-block relative pb-1">
+                NJ
                 <motion.span
-                  className="absolute bottom-0 left-0 w-full h-[2px] bg-primary"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: '100%' }}
-                  viewport={{ once: true }}
-                />
-              </span>
-              <span className="inline-block mx-1">J</span>
-              <span className="inline-block relative">
-                X
-                <motion.span
-                  className="absolute top-0 right-0 w-full h-[2px] bg-secondary"
+                  className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary to-secondary"
                   initial={{ width: 0 }}
                   whileInView={{ width: '100%' }}
                   viewport={{ once: true }}
