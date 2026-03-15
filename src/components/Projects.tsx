@@ -44,8 +44,8 @@ const Projects = () => {
                                 <div className="h-48 bg-gradient-to-b from-white/5 to-transparent relative overflow-hidden">
                                     <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
                                         {/* Fake Links for demo since none provided in resume */}
-                                        <a href="#" className="p-3 bg-white text-dark rounded-full hover:bg-primary transition-colors"><FaGithub size={20} /></a>
-                                        <a href="#" className="p-3 bg-white text-dark rounded-full hover:bg-primary transition-colors"><FaExternalLinkAlt size={20} /></a>
+                                        <a href="#" className="p-3 bg-white text-dark rounded-full hover:bg-primary transition-colors" aria-label="GitHub Repository"><FaGithub size={20} /></a>
+                                        <a href="#" className="p-3 bg-white text-dark rounded-full hover:bg-primary transition-colors" aria-label="Live Demo"><FaExternalLinkAlt size={20} /></a>
                                     </div>
                                     <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" />
                                 </div>

@@ -27,9 +27,9 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: <FaGithub />, href: 'https://github.com/nishinjerry', color: 'hover:text-white' },
-    { name: 'LinkedIn', icon: <FaLinkedin />, href: 'https://linkedin.com', color: 'hover:text-blue-400' },
-    { name: 'Twitter', icon: <FaTwitter />, href: 'https://twitter.com', color: 'hover:text-sky-400' },
+    { name: 'GitHub', icon: <FaGithub />, href: 'https://github.com/nishinjerry', color: 'hover:text-white', ariaLabel: 'GitHub Profile' },
+    { name: 'LinkedIn', icon: <FaLinkedin />, href: 'https://linkedin.com', color: 'hover:text-blue-400', ariaLabel: 'LinkedIn Profile' },
+    { name: 'Twitter', icon: <FaTwitter />, href: 'https://twitter.com', color: 'hover:text-sky-400', ariaLabel: 'Twitter Profile' },
   ];
 
   return (
@@ -93,6 +93,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-gray-400 text-xl transition-colors ${social.color}`}
+                  aria-label={social.ariaLabel}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 + (i * 0.1), type: "spring", stiffness: 200 }}
@@ -109,6 +110,8 @@ const Navbar = () => {
             <motion.button
               onClick={toggleMenu}
               whileTap={{ scale: 0.9 }}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
               className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-white hover:bg-white/10 focus:outline-none"
             >
               <AnimatePresence mode="wait">
@@ -172,6 +175,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`text-gray-400 text-2xl ${social.color}`}
+                    aria-label={social.ariaLabel}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.3 + (i * 0.1) }}
