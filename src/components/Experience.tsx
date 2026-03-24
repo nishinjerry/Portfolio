@@ -70,10 +70,10 @@ const Experience = () => {
                                     <div className="md:w-5/12 bg-white dark:bg-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 transition-all duration-300 shadow-sm hover:shadow-md">
                                         <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full mb-3 font-mono">{exp.period}</span>
                                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.role}</h3>
-                                        <h4 className="text-lg text-gray-600 dark:text-gray-400 mb-4">{exp.company} <span className="text-sm opacity-60">• {exp.location}</span></h4>
+                                        <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-4">{exp.company} <span className="text-sm opacity-80">• {exp.location}</span></h4>
                                         <ul className="space-y-2">
                                             {exp.description.map((item, idx) => (
-                                                <li key={idx} className="text-gray-600 dark:text-gray-400 text-sm flex items-start gap-2">
+                                                <li key={idx} className="text-gray-700 dark:text-gray-300 text-sm flex items-start gap-2">
                                                     <span className="text-primary mt-1">▹</span>
                                                     {item}
                                                 </li>

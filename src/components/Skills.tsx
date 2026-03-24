@@ -85,11 +85,11 @@ const Skills = () => {
                                     {category.skills.map((skill, idx) => (
                                         <div key={idx}>
                                             <div className="flex justify-between items-center mb-2">
-                                                <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                                                    <span className="text-lg text-gray-500">{skill.icon}</span>
+                                                <div className="flex items-center gap-2 text-gray-800 dark:text-gray-200">
+                                                    <span className="text-lg text-gray-700 dark:text-gray-300">{skill.icon}</span>
                                                     <span className="text-sm font-medium">{skill.name}</span>
                                                 </div>
-                                                <span className="text-xs font-bold text-gray-500">
+                                                <span className="text-xs font-bold text-gray-700 dark:text-gray-300">
                                                     {skill.level}%
                                                 </span>
                                             </div>

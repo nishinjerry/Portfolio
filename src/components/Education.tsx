@@ -29,17 +29,17 @@ const Education = () => {
                                     </div>
                                     <h4 className="text-xl font-bold text-gray-900 dark:text-white">Master of Science in Data Science</h4>
                                     <p className="text-primary text-sm mb-2">St. Joseph’s College, Tiruchirappalli</p>
-                                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">July 2022 - Apr 2024</p>
+                                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-1">July 2022 - Apr 2024</p>
                                     <p className="text-gray-700 dark:text-gray-300 font-mono">CGPA: 7.70</p>
                                 </div>
 
                                 <div className="relative">
-                                    <div className="absolute -left-[39px] top-0 bg-white dark:bg-dark p-2 rounded-full border border-black/20 dark:border-white/20 text-gray-500 dark:text-gray-400">
+                                    <div className="absolute -left-[39px] top-0 bg-white dark:bg-dark p-2 rounded-full border border-gray-200 dark:border-gray-800 text-gray-700 dark:text-gray-300">
                                         <FaGraduationCap size={16} />
                                     </div>
                                     <h4 className="text-xl font-bold text-gray-900 dark:text-white">Bachelor of Computer Application</h4>
                                     <p className="text-primary text-sm mb-2">Loyola college Chennai</p>
-                                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">July 2019 - Apr 2022</p>
+                                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-1">July 2019 - Apr 2022</p>
                                     <p className="text-gray-700 dark:text-gray-300 font-mono">CGPA: 7.75</p>
                                 </div>
                             </div>

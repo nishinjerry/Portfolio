@@ -15,7 +15,7 @@ const About = () => {
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg space-y-6">
+                        <div className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg space-y-6">
                             <p>
                                 I am an aspiring <strong className="text-gray-900 dark:text-white">Data Scientist</strong> with strong skills in data analysis, machine learning, and statistical modeling.
                                 Proficient in <span className="text-primary">Python, R, SQL</span>, and data visualization tools.
@@ -32,15 +32,15 @@ const About = () => {
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
                                     <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                                    <span className="text-gray-600 dark:text-gray-300">Developing scalable Machine Learning models and Data Science solutions.</span>
+                                    <span className="text-gray-700 dark:text-gray-300">Developing scalable Machine Learning models and Data Science solutions.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                                    <span className="text-gray-600 dark:text-gray-300">Extracting meaningful patterns from complex datasets to drive decisions.</span>
+                                    <span className="text-gray-700 dark:text-gray-300">Extracting meaningful patterns from complex datasets to drive decisions.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
-                                    <span className="text-gray-600 dark:text-gray-300">Building intelligent systems with Python, ROS2, and modern web frameworks.</span>
+                                    <span className="text-gray-700 dark:text-gray-300">Building intelligent systems with Python, ROS2, and modern web frameworks.</span>
                                 </li>
                             </ul>
                         </div>

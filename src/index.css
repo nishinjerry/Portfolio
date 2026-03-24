@@ -3,11 +3,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary: #06b6d4;
-  --color-secondary: #8b5cf6;
-  --color-accent: #10b981;
-  --color-dark: #0a0a0a;
-  --color-dark-lighter: #1a1a1a;
+  --color-primary: #0284c7;
+  --color-secondary: #6d28d9;
+  --color-accent: #059669;
+  --color-dark: #0f172a;
+  --color-dark-lighter: #1e293b;
   --font-mono: 'Space Mono', monospace;
 }
 

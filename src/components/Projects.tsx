@@ -52,11 +52,11 @@ const Projects = () => {
 
                                 <div className="p-6">
                                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
-                                    <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                                    <p className="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">{project.description}</p>
 
                                     <div className="flex flex-wrap gap-2 mt-auto">
                                         {project.tags.map((tag, idx) => (
-                                            <span key={idx} className="text-xs font-medium px-2.5 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
+                                            <span key={idx} className="text-xs font-medium px-2.5 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-700 dark:text-gray-300">
                                                 {tag}
                                             </span>
                                         ))}

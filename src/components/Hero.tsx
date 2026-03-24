@@ -19,10 +19,10 @@ const Hero = () => {
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">
                         Nishin Jerry X I
                     </h1>
-                    <h3 className="text-2xl md:text-4xl text-gray-600 dark:text-gray-300 mb-8 font-light">
+                    <h3 className="text-2xl md:text-4xl text-gray-700 dark:text-gray-300 mb-8 font-light">
                         Aspiring <span className="text-primary font-semibold">Data Scientist</span>
                     </h3>
-                    <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg mb-10 leading-relaxed">
+                    <p className="max-w-2xl mx-auto text-gray-700 dark:text-gray-400 text-lg mb-10 leading-relaxed">
                         Crafting intelligent solutions with Python, Machine Learning, and Data Analysis.
                         Passionate about turning data into actionable insights.
                     </p>
