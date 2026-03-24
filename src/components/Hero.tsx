@@ -4,9 +4,9 @@ const Hero = () => {
     return (
         <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
             {/* Background Elements */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <div className="absolute top-20 left-20 w-72 h-72 bg-gray-100 dark:bg-white/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 right-20 w-96 h-96 bg-gray-50 dark:bg-white/5 rounded-full blur-3xl" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
@@ -16,7 +16,7 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-secondary font-mono text-lg mb-4">Hello, I'm</h2>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">
                         Nishin Jerry X I
                     </h1>
                     <h3 className="text-2xl md:text-4xl text-gray-600 dark:text-gray-300 mb-8 font-light">
@@ -27,16 +27,16 @@ const Hero = () => {
                         Passionate about turning data into actionable insights.
                     </p>
 
-                    <div className="flex justify-center gap-4">
+                    <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a
                             href="#projects"
-                            className="px-8 py-3 bg-primary/10 border border-primary text-primary rounded-full hover:bg-primary hover:text-white dark:hover:text-dark transition-all duration-300 font-medium"
+                            className="px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-all duration-300 font-medium shadow-sm"
                         >
                             View Projects
                         </a>
                         <a
                             href="#contact"
-                            className="px-8 py-3 border border-black/20 dark:border-white/20 text-gray-900 dark:text-white rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-all duration-300 font-medium"
+                            className="px-8 py-3 border border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white rounded-full hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300 font-medium"
                         >
                             Contact Me
                         </a>

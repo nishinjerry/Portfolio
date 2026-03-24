@@ -47,12 +47,6 @@ const Navbar = () => {
             <span className="text-2xl font-bold font-mono text-gray-900 dark:text-white relative flex items-center">
               <span className="inline-block relative pb-1">
                 NJ
-                <motion.span
-                  className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-primary to-secondary"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: '100%' }}
-                  viewport={{ once: true }}
-                />
               </span>
             </span>
           </motion.div>

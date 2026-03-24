@@ -6,7 +6,7 @@ const Skills = () => {
     const categories = [
         {
             title: "Programming",
-            icon: <FaCode className="text-4xl text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]" />,
+            icon: <FaCode className="text-3xl text-primary" />,
             skills: [
                 { name: "Python", icon: <FaPython />, level: 90 },
                 { name: "React", icon: <FaReact />, level: 85 },
@@ -14,11 +14,11 @@ const Skills = () => {
                 { name: "NestJS", icon: <SiNestjs />, level: 75 },
                 { name: "SQL", icon: <SiMysql />, level: 85 },
             ],
-            color: "from-cyan-500 to-blue-600"
+            color: "bg-blue-500"
         },
         {
             title: "Machine Learning",
-            icon: <FaRobot className="text-4xl text-violet-400 drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]" />,
+            icon: <FaRobot className="text-3xl text-primary" />,
             skills: [
                 { name: "TensorFlow", icon: <SiTensorflow />, level: 75 },
                 { name: "Scikit-learn", icon: <SiScikitlearn />, level: 85 },
@@ -26,129 +26,84 @@ const Skills = () => {
                 { name: "Pandas", icon: <SiPandas />, level: 90 },
                 { name: "OpenCV", icon: <SiOpencv />, level: 70 },
             ],
-            color: "from-violet-500 to-purple-600"
+            color: "bg-purple-500"
         },
         {
             title: "Data Visualization",
-            icon: <FaChartBar className="text-4xl text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.5)]" />,
+            icon: <FaChartBar className="text-3xl text-primary" />,
             skills: [
                 { name: "Power BI", icon: <FaChartBar />, level: 80 },
                 { name: "Matplotlib", icon: <FaChartBar />, level: 85 },
             ],
-            color: "from-emerald-500 to-green-600"
+            color: "bg-emerald-500"
         },
         {
             title: "Tools & Others",
-            icon: <FaWindows className="text-4xl text-pink-400 drop-shadow-[0_0_10px_rgba(244,114,182,0.5)]" />,
+            icon: <FaWindows className="text-3xl text-primary" />,
             skills: [
                 { name: "ROS2 (rclpy)", icon: <SiRos />, level: 65 },
                 { name: "MS Office", icon: <FaWindows />, level: 95 },
                 { name: "Database Mgmt", icon: <FaDatabase />, level: 80 },
             ],
-            color: "from-pink-500 to-rose-600"
+            color: "bg-pink-500"
         }
     ];
 
     return (
-        <section id="skills" className="py-20 relative overflow-hidden">
-            {/* Background Tech Elements */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-                <div className="absolute top-20 left-10 w-64 h-64 border border-cyan-500/30 rounded-full animate-spin-slow dashed-border"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 border border-violet-500/30 rounded-full animate-reverse-spin dashed-border"></div>
-            </div>
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section id="skills" className="py-20 bg-gray-50 dark:bg-dark-lighter relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-4xl md:text-6xl font-black mb-20 text-center font-mono tracking-tighter">
-                        <span className="inline-block border-b-4 border-cyan-500 pb-2">
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-fuchsia-400">02.</span>
-                            <span className="text-gray-900 dark:text-white ml-4">Tech/Stack</span>
-                        </span>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">
+                        Skills & Expertise
                     </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 perspective-1000">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {categories.map((category, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, rotateX: -90 }}
-                                whileInView={{ opacity: 1, rotateX: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{
-                                    type: "spring",
-                                    stiffness: 50,
-                                    damping: 20,
-                                    delay: index * 0.1
-                                }}
-                                whileHover={{
-                                    scale: 1.05,
-                                    rotateY: 5,
-                                    zIndex: 10,
-                                    transition: { duration: 0.3 }
-                                }}
-                                className="group relative"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="bg-white dark:bg-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow"
                             >
-                                {/* Holographic Card Background */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
-                                <div className={`absolute -inset-0.5 bg-gradient-to-r ${category.color} rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500`} />
-
-                                <div className="relative h-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl p-6 rounded-2xl border border-black/10 dark:border-white/10 overflow-hidden transform-style-3d">
-                                    {/* Tech Circuit Pattern Overlay */}
-                                    <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,0,0,0.1)_1px,_transparent_1px)] dark:bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:10px_10px]"></div>
-
-                                    <div className="relative z-10">
-                                        <div className="flex flex-col items-center mb-6">
-                                            <motion.div
-                                                className="p-4 bg-white/5 rounded-2xl mb-4 ring-1 ring-white/10 group-hover:ring-white/30"
-                                                animate={{
-                                                    y: [0, -10, 0],
-                                                    filter: ["drop-shadow(0 0 0px rgba(0,0,0,0))", "drop-shadow(0 0 15px rgba(255,255,255,0.2))", "drop-shadow(0 0 0px rgba(0,0,0,0))"]
-                                                }}
-                                                transition={{
-                                                    duration: 4,
-                                                    repeat: Infinity,
-                                                    delay: index * 1
-                                                }}
-                                            >
-                                                {category.icon}
-                                            </motion.div>
-                                            <h3 className="text-xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 group-hover:from-gray-900 group-hover:to-gray-900 dark:group-hover:from-white dark:group-hover:to-white transition-all">
-                                                {category.title}
-                                            </h3>
-                                        </div>
-
-                                        <div className="space-y-5">
-                                            {category.skills.map((skill, idx) => (
-                                                <div key={idx} className="group/skill">
-                                                    <div className="flex justify-between items-center mb-2">
-                                                        <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover/skill:text-cyan-600 dark:group-hover/skill:text-cyan-300 transition-colors">
-                                                            <span className="text-lg">{skill.icon}</span>
-                                                            <span className="font-mono text-sm font-medium tracking-wide">{skill.name}</span>
-                                                        </div>
-                                                        <span className="text-xs font-bold text-gray-500 dark:text-gray-400 group-hover/skill:text-gray-900 dark:group-hover/skill:text-white transition-colors">
-                                                            {skill.level}%
-                                                        </span>
-                                                    </div>
-                                                    <div className="h-2 w-full bg-gray-200 dark:bg-black/50 rounded-full overflow-hidden p-[1px] border border-black/5 dark:border-white/5">
-                                                        <motion.div
-                                                            initial={{ width: 0 }}
-                                                            whileInView={{ width: `${skill.level}%` }}
-                                                            viewport={{ once: true }}
-                                                            transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 + (idx * 0.1) }}
-                                                            className={`h-full bg-gradient-to-r ${category.color} rounded-full relative overflow-hidden`}
-                                                        >
-                                                            {/* Shimmer Effect */}
-                                                            <div className="absolute top-0 left-0 bottom-0 w-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shimmer" />
-                                                        </motion.div>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
+                                <div className="flex flex-col items-center mb-8">
+                                    <div className="p-4 bg-primary/10 rounded-2xl mb-4 text-primary">
+                                        {category.icon}
                                     </div>
+                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                                        {category.title}
+                                    </h3>
+                                </div>
+
+                                <div className="space-y-6">
+                                    {category.skills.map((skill, idx) => (
+                                        <div key={idx}>
+                                            <div className="flex justify-between items-center mb-2">
+                                                <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                                                    <span className="text-lg text-gray-500">{skill.icon}</span>
+                                                    <span className="text-sm font-medium">{skill.name}</span>
+                                                </div>
+                                                <span className="text-xs font-bold text-gray-500">
+                                                    {skill.level}%
+                                                </span>
+                                            </div>
+                                            <div className="h-1.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                                                <motion.div
+                                                    initial={{ width: 0 }}
+                                                    whileInView={{ width: `${skill.level}%` }}
+                                                    viewport={{ once: true }}
+                                                    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                                                    className={`h-full ${category.color} rounded-full`}
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </motion.div>
                         ))}

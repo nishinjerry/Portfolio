@@ -46,8 +46,8 @@ const Experience = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center font-mono">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">03.</span> Experience
+                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">
+                        Experience
                     </h2>
 
                     <div className="max-w-4xl mx-auto">
@@ -67,7 +67,7 @@ const Experience = () => {
 
                                     <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-dark -translate-x-1.5 md:-translate-x-2 mt-1.5 md:mt-0 z-10"></div>
 
-                                    <div className="md:w-5/12 bg-white dark:bg-dark p-6 rounded-xl border border-black/5 dark:border-white/5 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-primary/10">
+                                    <div className="md:w-5/12 bg-white dark:bg-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 transition-all duration-300 shadow-sm hover:shadow-md">
                                         <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full mb-3 font-mono">{exp.period}</span>
                                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.role}</h3>
                                         <h4 className="text-lg text-gray-600 dark:text-gray-400 mb-4">{exp.company} <span className="text-sm opacity-60">• {exp.location}</span></h4>

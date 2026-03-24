@@ -11,8 +11,8 @@ const Education = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center font-mono">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">05.</span> Education
+                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">
+                        Education
                     </h2>
 
                     <div className="grid lg:grid-cols-2 gap-12">
@@ -63,10 +63,9 @@ const Education = () => {
                                 ].map((cert, idx) => (
                                     <motion.div
                                         key={idx}
-                                        whileHover={{ x: 10 }}
-                                        className="p-4 bg-white dark:bg-dark border border-black/5 dark:border-white/5 rounded-lg flex items-center gap-3 hover:border-secondary/30 transition-colors shadow-sm dark:shadow-none"
+                                        className="p-4 bg-white dark:bg-dark border border-gray-100 dark:border-gray-800 rounded-lg flex items-center gap-3 transition-all hover:shadow-md shadow-sm"
                                     >
-                                        <div className="w-2 h-2 rounded-full bg-secondary"></div>
+                                        <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
                                         <span className="text-gray-700 dark:text-gray-300 text-sm">{cert}</span>
                                     </motion.div>
                                 ))}

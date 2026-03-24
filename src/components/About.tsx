@@ -10,8 +10,8 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center font-mono">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">01.</span> About Me
+                    <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+                        About Me
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -27,24 +27,22 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div className="relative group">
-                            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                            <div className="relative bg-gray-900 dark:bg-dark p-8 rounded-lg border border-white/10">
-                                <code className="text-sm text-green-400 block mb-2"># current_status</code>
-                                <div className="text-gray-400 font-mono text-sm">
-                                    <span className="text-purple-400">const</span> <span className="text-blue-400">aspirations</span> = [<br />
-                                    &nbsp;&nbsp;<span className="text-orange-300">'Data Scientist'</span>,<br />
-                                    &nbsp;&nbsp;<span className="text-orange-300">'ML Engineer'</span>,<br />
-                                    &nbsp;&nbsp;<span className="text-orange-300">'AI Researcher'</span><br />
-                                    ];<br /><br />
-
-                                    <span className="text-purple-400">while</span>(<span className="text-blue-400">alive</span>) &#123;<br />
-                                    &nbsp;&nbsp;<span className="text-yellow-300">learn</span>();<br />
-                                    &nbsp;&nbsp;<span className="text-yellow-300">build</span>();<br />
-                                    &nbsp;&nbsp;<span className="text-yellow-300">innovate</span>();<br />
-                                    &#125;
-                                </div>
-                            </div>
+                        <div className="bg-white dark:bg-dark p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                            <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white border-b border-gray-100 dark:border-gray-800 pb-3">Professional Focus</h3>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+                                    <span className="text-gray-600 dark:text-gray-300">Developing scalable Machine Learning models and Data Science solutions.</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+                                    <span className="text-gray-600 dark:text-gray-300">Extracting meaningful patterns from complex datasets to drive decisions.</span>
+                                </li>
+                                <li className="flex items-start gap-3">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0"></span>
+                                    <span className="text-gray-600 dark:text-gray-300">Building intelligent systems with Python, ROS2, and modern web frameworks.</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </motion.div>

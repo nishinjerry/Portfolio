@@ -26,8 +26,8 @@ const Projects = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center font-mono">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">04.</span> Projects
+                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">
+                        Projects
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-8">
@@ -38,7 +38,7 @@ const Projects = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                                className="group relative bg-white dark:bg-dark-lighter rounded-xl overflow-hidden border border-black/5 dark:border-white/5 hover:border-primary/50 transition-all duration-300 shadow-lg dark:shadow-none"
+                                className="group relative bg-white dark:bg-dark-lighter rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-300 shadow-sm hover:shadow-md"
                             >
                                 {/* Image Overlay */}
                                 <div className="h-48 bg-gradient-to-b from-white/5 to-transparent relative overflow-hidden">
@@ -56,7 +56,7 @@ const Projects = () => {
 
                                     <div className="flex flex-wrap gap-2 mt-auto">
                                         {project.tags.map((tag, idx) => (
-                                            <span key={idx} className="text-xs font-mono px-2 py-1 bg-black/5 dark:bg-white/5 rounded text-primary border border-primary/20">
+                                            <span key={idx} className="text-xs font-medium px-2.5 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300">
                                                 {tag}
                                             </span>
                                         ))}
