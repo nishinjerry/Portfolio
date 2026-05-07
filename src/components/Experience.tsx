@@ -1,44 +1,64 @@
 import { motion } from 'framer-motion';
+import { FaBriefcase } from 'react-icons/fa';
+
+const experiences = [
+    {
+        company: 'Skillmine Technology',
+        location: 'Sivakasi, Tamil Nadu',
+        role: 'Junior Software Developer',
+        type: 'Full-time · On-site',
+        period: 'Jul 2025 – Present',
+        color: 'bg-primary',
+        highlights: [
+            'Developed and enhanced backend features for enterprise applications, improving API performance by ~25% and reducing runtime errors by ~20%.',
+            'Implemented backend business logic and optimized SQL queries, reducing database response time by ~30%.',
+            'Supporting debugging, testing, and deployment activities throughout the SDLC process.',
+        ],
+    },
+    {
+        company: 'Skillmine Technology',
+        location: 'Sivakasi, Tamil Nadu',
+        role: 'Software Developer Trainee',
+        type: 'Trainee',
+        period: 'Jan 2025 – Jul 2025',
+        color: 'bg-secondary',
+        highlights: [
+            'Completed intensive training in software development practices, database management, and application architecture.',
+            'Assisted in real-time project development and learned industry-level coding standards.',
+            'Gained hands-on experience in Agile methodology and version control systems.',
+        ],
+    },
+    {
+        company: 'Cool Dreamers',
+        location: 'Remote',
+        role: 'Machine Learning Intern',
+        type: 'Internship',
+        period: 'Aug 2024 – Jan 2025',
+        color: 'bg-accent',
+        highlights: [
+            'Built and evaluated ML models on real-world datasets (10K+ records), improving model accuracy by ~15%.',
+            'Performed data preprocessing, feature engineering, and model evaluation.',
+            'Applied ML techniques to solve real-world business problems.',
+        ],
+    },
+    {
+        company: 'Thedush Robotics',
+        location: 'Coimbatore, Tamil Nadu',
+        role: 'Project Intern',
+        type: 'Internship',
+        period: 'Jan 2024 – Mar 2024',
+        color: 'bg-pink-500',
+        highlights: [
+            'Worked extensively with Robot Operating System (ROS).',
+            'Assisted in robotics-based data processing and automation tasks.',
+            'Integrated sensor data for real-time robotic applications.',
+        ],
+    },
+];
 
 const Experience = () => {
-    const experiences = [
-        {
-            company: "Skillmine Technology",
-            location: "Sivakasi",
-            role: "Junior Software Developer",
-            period: "Jul 2024 - Present",
-            description: [
-                "Currently working as a full-time Junior Software Developer.",
-                "Contributing to the development and maintenance of software applications.",
-                "Collaborating with the team to deliver high-quality code and solutions."
-            ]
-        },
-        {
-            company: "Thedush Robotics Private Limited",
-            location: "Coimbatore",
-            role: "Data Science Intern",
-            period: "Jan 2024 - Mar 2024",
-            description: [
-                "Training mainly focused on how data science skills apply in the robotics field.",
-                "Studied the fundamentals of ROS2 and sensor technology.",
-                "Explored different sensors for robotic applications."
-            ]
-        },
-        {
-            company: "Airobosoft Products and Services LLP",
-            location: "Bangalore",
-            role: "Data Science Intern",
-            period: "May 2023 - Jun 2023",
-            description: [
-                "Internship mainly focused on Machine Learning and Artificial Intelligence.",
-                "Completed various ML projects involving data analysis and data visualization.",
-                "Acquired practical experience in applying ML techniques to real-world challenges."
-            ]
-        }
-    ];
-
     return (
-        <section id="experience" className="py-20 bg-gray-50 dark:bg-dark-lighter relative">
+        <section id="experience" className="py-24 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -46,43 +66,59 @@ const Experience = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">
-                        Experience
-                    </h2>
+                    <div className="text-center mb-16">
+                        <p className="text-primary font-mono text-sm mb-2 tracking-widest uppercase">My journey</p>
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
+                            Experience
+                        </h2>
+                    </div>
 
-                    <div className="max-w-4xl mx-auto">
-                        {experiences.map((exp, index) => (
-                            <div key={index} className="relative pl-8 md:pl-0">
-                                {/* Timeline Line */}
-                                <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-black/10 dark:bg-white/10 -translate-x-1/2"></div>
+                    <div className="max-w-3xl mx-auto relative">
+                        {/* Vertical line */}
+                        <div className="absolute left-5 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 hidden sm:block" />
 
+                        <div className="space-y-10">
+                            {experiences.map((exp, index) => (
                                 <motion.div
-                                    initial={{ opacity: 0, y: 50 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                    key={index}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                                    className={`md:flex items-center justify-between mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="relative flex gap-6 sm:pl-16"
                                 >
-                                    <div className="hidden md:block w-5/12"></div>
+                                    {/* Timeline dot */}
+                                    <div className={`absolute left-2.5 top-5 w-5 h-5 rounded-full ${exp.color} border-4 border-white dark:border-dark z-10 hidden sm:block flex-shrink-0`} />
 
-                                    <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-dark -translate-x-1.5 md:-translate-x-2 mt-1.5 md:mt-0 z-10"></div>
+                                    <div className="flex-1 bg-white dark:bg-dark-lighter border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                                        {/* Header */}
+                                        <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                                            <div>
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <FaBriefcase className="text-primary text-sm" />
+                                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{exp.role}</h3>
+                                                </div>
+                                                <p className="text-primary font-medium">{exp.company}</p>
+                                                <p className="text-gray-500 dark:text-gray-500 text-xs mt-0.5">{exp.location} · {exp.type}</p>
+                                            </div>
+                                            <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-mono rounded-full flex-shrink-0">
+                                                {exp.period}
+                                            </span>
+                                        </div>
 
-                                    <div className="md:w-5/12 bg-white dark:bg-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 transition-all duration-300 shadow-sm hover:shadow-md">
-                                        <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs rounded-full mb-3 font-mono">{exp.period}</span>
-                                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{exp.role}</h3>
-                                        <h4 className="text-lg text-gray-700 dark:text-gray-300 mb-4">{exp.company} <span className="text-sm opacity-80">• {exp.location}</span></h4>
+                                        {/* Bullets */}
                                         <ul className="space-y-2">
-                                            {exp.description.map((item, idx) => (
-                                                <li key={idx} className="text-gray-700 dark:text-gray-300 text-sm flex items-start gap-2">
-                                                    <span className="text-primary mt-1">▹</span>
+                                            {exp.highlights.map((item, idx) => (
+                                                <li key={idx} className="flex items-start gap-2 text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                                                    <span className="text-primary mt-1 flex-shrink-0">▹</span>
                                                     {item}
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
                                 </motion.div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </motion.div>
             </div>

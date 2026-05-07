@@ -1,56 +1,77 @@
 import { motion } from 'framer-motion';
-import { FaPython, FaDatabase, FaChartBar, FaRobot, FaWindows, FaCode, FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiTensorflow, SiScikitlearn, SiNumpy, SiPandas, SiOpencv, SiRos, SiMysql, SiNestjs } from 'react-icons/si';
+import {
+    FaPython, FaDatabase, FaChartBar, FaCode, FaNodeJs, FaGitAlt, FaGithub, FaBrain,
+} from 'react-icons/fa';
+import {
+    SiScikitlearn, SiNumpy, SiPandas, SiMysql, SiMongodb, SiNestjs,
+    SiPlotly, SiStreamlit, SiJupyter, SiPostman, SiJavascript,
+} from 'react-icons/si';
+
+const categories = [
+    {
+        title: 'Programming',
+        accent: '#0284c7',
+        skills: [
+            { name: 'Python', icon: <FaPython /> },
+            { name: 'SQL', icon: <FaDatabase /> },
+            { name: 'JavaScript', icon: <SiJavascript /> },
+        ],
+    },
+    {
+        title: 'Backend Development',
+        accent: '#6d28d9',
+        skills: [
+            { name: 'Nest.js', icon: <SiNestjs /> },
+            { name: 'Node.js', icon: <FaNodeJs /> },
+            { name: 'REST APIs', icon: <FaCode /> },
+            { name: 'Microservices', icon: <FaCode /> },
+        ],
+    },
+    {
+        title: 'Machine Learning',
+        accent: '#059669',
+        skills: [
+            { name: 'Scikit-learn', icon: <SiScikitlearn /> },
+            { name: 'Pandas', icon: <SiPandas /> },
+            { name: 'NumPy', icon: <SiNumpy /> },
+            { name: 'NLP', icon: <FaBrain /> },
+            { name: 'Feature Eng.', icon: <FaChartBar /> },
+        ],
+    },
+    {
+        title: 'Data Visualization',
+        accent: '#db2777',
+        skills: [
+            { name: 'Power BI', icon: <FaChartBar /> },
+            { name: 'Plotly', icon: <SiPlotly /> },
+            { name: 'Matplotlib', icon: <FaChartBar /> },
+            { name: 'Seaborn', icon: <FaChartBar /> },
+            { name: 'Streamlit', icon: <SiStreamlit /> },
+        ],
+    },
+    {
+        title: 'Databases',
+        accent: '#d97706',
+        skills: [
+            { name: 'MySQL', icon: <SiMysql /> },
+            { name: 'MongoDB', icon: <SiMongodb /> },
+        ],
+    },
+    {
+        title: 'Tools',
+        accent: '#64748b',
+        skills: [
+            { name: 'Git', icon: <FaGitAlt /> },
+            { name: 'GitHub', icon: <FaGithub /> },
+            { name: 'Postman', icon: <SiPostman /> },
+            { name: 'Jupyter', icon: <SiJupyter /> },
+        ],
+    },
+];
 
 const Skills = () => {
-    const categories = [
-        {
-            title: "Programming",
-            icon: <FaCode className="text-3xl text-primary" />,
-            skills: [
-                { name: "Python", icon: <FaPython />, level: 90 },
-                { name: "React", icon: <FaReact />, level: 85 },
-                { name: "Node.js", icon: <FaNodeJs />, level: 80 },
-                { name: "NestJS", icon: <SiNestjs />, level: 75 },
-                { name: "SQL", icon: <SiMysql />, level: 85 },
-            ],
-            color: "bg-blue-500"
-        },
-        {
-            title: "Machine Learning",
-            icon: <FaRobot className="text-3xl text-primary" />,
-            skills: [
-                { name: "TensorFlow", icon: <SiTensorflow />, level: 75 },
-                { name: "Scikit-learn", icon: <SiScikitlearn />, level: 85 },
-                { name: "NumPy", icon: <SiNumpy />, level: 90 },
-                { name: "Pandas", icon: <SiPandas />, level: 90 },
-                { name: "OpenCV", icon: <SiOpencv />, level: 70 },
-            ],
-            color: "bg-purple-500"
-        },
-        {
-            title: "Data Visualization",
-            icon: <FaChartBar className="text-3xl text-primary" />,
-            skills: [
-                { name: "Power BI", icon: <FaChartBar />, level: 80 },
-                { name: "Matplotlib", icon: <FaChartBar />, level: 85 },
-            ],
-            color: "bg-emerald-500"
-        },
-        {
-            title: "Tools & Others",
-            icon: <FaWindows className="text-3xl text-primary" />,
-            skills: [
-                { name: "ROS2 (rclpy)", icon: <SiRos />, level: 65 },
-                { name: "MS Office", icon: <FaWindows />, level: 95 },
-                { name: "Database Mgmt", icon: <FaDatabase />, level: 80 },
-            ],
-            color: "bg-pink-500"
-        }
-    ];
-
     return (
-        <section id="skills" className="py-20 bg-gray-50 dark:bg-dark-lighter relative">
+        <section id="skills" className="py-24 relative">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -58,51 +79,51 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">
-                        Skills & Expertise
-                    </h2>
+                    <div className="text-center mb-16">
+                        <p className="text-primary font-mono text-sm mb-2 tracking-widest uppercase">My toolkit</p>
+                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
+                            Skills & Expertise
+                        </h2>
+                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {categories.map((category, index) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {categories.map((cat, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 0, y: 24 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white dark:bg-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition-shadow"
+                                transition={{ duration: 0.5, delay: index * 0.08 }}
+                                className="bg-white dark:bg-dark-lighter border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
                             >
-                                <div className="flex flex-col items-center mb-8">
-                                    <div className="p-4 bg-primary/10 rounded-2xl mb-4 text-primary">
-                                        {category.icon}
-                                    </div>
-                                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                                        {category.title}
-                                    </h3>
+                                {/* Category header */}
+                                <div className="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100 dark:border-gray-800">
+                                    <div
+                                        className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                                        style={{ backgroundColor: cat.accent }}
+                                    />
+                                    <h3 className="font-semibold text-gray-900 dark:text-white">{cat.title}</h3>
                                 </div>
 
-                                <div className="space-y-6">
-                                    {category.skills.map((skill, idx) => (
-                                        <div key={idx}>
-                                            <div className="flex justify-between items-center mb-2">
-                                                <div className="flex items-center gap-2 text-gray-800 dark:text-gray-200">
-                                                    <span className="text-lg text-gray-700 dark:text-gray-300">{skill.icon}</span>
-                                                    <span className="text-sm font-medium">{skill.name}</span>
-                                                </div>
-                                                <span className="text-xs font-bold text-gray-700 dark:text-gray-300">
-                                                    {skill.level}%
-                                                </span>
-                                            </div>
-                                            <div className="h-1.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                                                <motion.div
-                                                    initial={{ width: 0 }}
-                                                    whileInView={{ width: `${skill.level}%` }}
-                                                    viewport={{ once: true }}
-                                                    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                                                    className={`h-full ${category.color} rounded-full`}
-                                                />
-                                            </div>
-                                        </div>
+                                {/* Skills chips */}
+                                <div className="flex flex-wrap gap-2">
+                                    {cat.skills.map((skill, idx) => (
+                                        <motion.span
+                                            key={idx}
+                                            initial={{ opacity: 0, scale: 0.85 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: index * 0.05 + idx * 0.04 }}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border transition-all duration-200 cursor-default"
+                                            style={{
+                                                backgroundColor: `${cat.accent}12`,
+                                                borderColor: `${cat.accent}30`,
+                                                color: cat.accent,
+                                            }}
+                                        >
+                                            <span className="text-base leading-none">{skill.icon}</span>
+                                            {skill.name}
+                                        </motion.span>
                                     ))}
                                 </div>
                             </motion.div>

@@ -23,12 +23,13 @@ const Navbar = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },
+    { name: 'Resume', href: '#resume' },
     { name: 'Contact', href: '#contact' },
   ];
 
   const socialLinks = [
     { name: 'GitHub', icon: <FaGithub />, href: 'https://github.com/nishinjerry', color: 'hover:text-white', ariaLabel: 'GitHub Profile' },
-    { name: 'LinkedIn', icon: <FaLinkedin />, href: 'https://linkedin.com', color: 'hover:text-blue-400', ariaLabel: 'LinkedIn Profile' },
+    { name: 'LinkedIn', icon: <FaLinkedin />, href: 'https://www.linkedin.com/in/nishin-jerry/', color: 'hover:text-blue-400', ariaLabel: 'LinkedIn Profile' },
     { name: 'Twitter', icon: <FaTwitter />, href: 'https://twitter.com', color: 'hover:text-sky-400', ariaLabel: 'Twitter Profile' },
   ];
 
@@ -57,7 +58,7 @@ const Navbar = () => {
                 <motion.a
                   key={link.name}
                   href={link.href}
-                  className="relative px-3 py-2 text-sm font-medium text-gray-300 hover:text-primary transition-colors group"
+                  className="relative px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors group"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
@@ -143,7 +144,7 @@ const Navbar = () => {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: i * 0.05 }}
-                  className="text-gray-300 hover:text-primary hover:bg-white/5 block px-3 py-3 rounded-md text-base font-medium flex items-center justify-between group"
+                  className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:bg-gray-50 dark:hover:bg-white/5 block px-3 py-3 rounded-md text-base font-medium flex items-center justify-between group"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
